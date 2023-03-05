@@ -3,8 +3,6 @@ using System;
 class ArtificialDumbness : ExtraMethods
 {
 
-    static byte randomPosDrawAmount = 0;
-
     //This byte is here to fix a stackoverflow exception in the "DrawRandomPosition()" method
     static byte loopRandomDraw = 9;
 
@@ -19,15 +17,6 @@ class ArtificialDumbness : ExtraMethods
       Console.ForegroundColor = ConsoleColor.Red;
 
       bool patternFound = false;
-
-/*
-      //For the first turn, the AI will play randomly
-      if (randomPosDrawAmount < 1) 
-      {
-      DrawRandomPosition();
-      randomPosDrawAmount+=2;
-      }
- */     
 
 
       // Horizontal 'Almost Wins'
