@@ -305,22 +305,12 @@ class ExtraMethods
    //This method checks if the match is over by checking the bools of the player and the AI
    public static bool CheckIfMatchIsOver()
    {
-      if (
 
-          ( posOnePlayed || ArtificialDumbness.AIposOnePlayed ) &&
-          ( posTwoPlayed || ArtificialDumbness.AIposTwoPlayed ) &&
-          ( posThreePlayed || ArtificialDumbness.AIposThreePlayed ) &&
-          ( posFourPlayed || ArtificialDumbness.AIposFourPlayed ) &&
-          ( posFivePlayed || ArtificialDumbness.AIposFivePlayed ) &&
-          ( posSixPlayed || ArtificialDumbness.AIposSixPlayed ) &&
-          ( posSevenPlayed || ArtificialDumbness.AIposSevenPlayed ) &&
-          ( posEightPlayed || ArtificialDumbness.AIposEightPlayed ) &&
-          ( posNinePlayed || ArtificialDumbness.AIposNinePlayed )
-
-         )   
+         if ( Results.CheckTie() || Results.CheckLose() || Results.CheckWin() )
 
          { return true; }   
          else { return false; }
+
    }
 
 

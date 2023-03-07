@@ -14,7 +14,7 @@ class MainClass : DrawingPlayer
     static void Main()
     {
          Console.Clear();
-         Console.CursorVisible = true;
+         Console.CursorVisible = false;
 
          AskIfUserWantsToPlayCircle();
 

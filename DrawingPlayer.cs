@@ -109,6 +109,10 @@ class DrawingPlayer : ExtraMethods
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
 
+
+		       //Checks if either the AI or the player won
+		       Results.WinLoseDraw();
+
 		     }
 
              //If that position has been taken by the AI, it just beeps the console and resets to the "default" position
@@ -157,6 +161,9 @@ class DrawingPlayer : ExtraMethods
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
  
+
+		       Results.WinLoseDraw();
+
 		     }
 
 		     else
@@ -197,6 +204,9 @@ class DrawingPlayer : ExtraMethods
 
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
+
+
+		       Results.WinLoseDraw();
 
 			 }
 			 
@@ -244,6 +254,9 @@ class DrawingPlayer : ExtraMethods
 
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
+
+
+		       Results.WinLoseDraw();
 
 			 }
 
@@ -297,6 +310,9 @@ class DrawingPlayer : ExtraMethods
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
 
+
+		       Results.WinLoseDraw();
+
 			 }
 
 			 else
@@ -343,6 +359,9 @@ class DrawingPlayer : ExtraMethods
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
 
+
+		       Results.WinLoseDraw();
+
 			 }
 
 			 else
@@ -383,6 +402,10 @@ class DrawingPlayer : ExtraMethods
 
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
+
+
+
+		       Results.WinLoseDraw();
 
 			 }
 
@@ -432,6 +455,9 @@ class DrawingPlayer : ExtraMethods
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
 
+
+		       Results.WinLoseDraw();
+
 			 }
 
 			 else
@@ -474,6 +500,9 @@ class DrawingPlayer : ExtraMethods
 		       if ( ArtificialDumbness.AttackAI() == false )
 		       { ArtificialDumbness.DefenseAI(); }
 
+
+		       Results.WinLoseDraw();
+
 			 }
 
 			 else
@@ -487,16 +516,21 @@ class DrawingPlayer : ExtraMethods
 	      }
 
 
+
 		//If the match is over, it breaks the loop and the program ends
 		//Else, it loops through the "MarkerMovement()" method again
-
 		if ( CheckIfMatchIsOver() ) 
-		{ Console.ReadKey(true); Console.Clear(); Console.WriteLine("Match is over"); } 
+		{
+                    //TODO: WRITE A LOOP PROMPT HERE :)
+		} 
 
                 else 
                 { 
                   Console.SetCursorPosition( (int)PosX.Middle, (int)PosY.Middle ); 
+
+		  Console.ForegroundColor = ConsoleColor.Cyan;
                   Console.Write("██"); 
+
                   MarkerMovement(); 
                 }
 
