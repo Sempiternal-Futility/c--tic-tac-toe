@@ -4,51 +4,8 @@ class DrawingPlayer : ExtraMethods
 {
     public static bool circle = false;
 
-    public static void AskIfUserWantsToPlayCircle()
-    {
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine("DO YOU WANT TO PLAY WITH CIRCLE?  (y/n)");
 
-        bool repeatSwitch = true;
-
-        while (repeatSwitch)
-        {
-            switch (Console.ReadKey(true).KeyChar)
-            {
-                case 'y' : 
-
-                repeatSwitch = false; circle = true;
-                break;
-
-                case 'n' :
-                repeatSwitch = false; circle = false;
-                break;
-
-                default : repeatSwitch = true;
-                break;
-            }
-        }
-    }
-
-
-
-    public static void DrawingMarker()
-    {
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        string playerMarker = "██";
-
-
-        //Places the marker on the "default" position
-        Console.SetCursorPosition( (int) PosX.Middle, (int) PosY.Middle );
-        Console.Write(playerMarker);
-
-        MarkerMovement();
-        
-
-    }
-
-
-    //Places the marker on the screen
+    //PLACES THE MARKER ON THE SCREEN
     public static void DrawMarker(int posX, int posY)
     {
          Console.ForegroundColor = ConsoleColor.Cyan;
@@ -57,7 +14,7 @@ class DrawingPlayer : ExtraMethods
     }
 
 
-    //Erases the marker from the screen
+    //ERASES THE MARKER FROM THE SCREEN
     public static void EraseMarker()
     {
          Console.ForegroundColor = ConsoleColor.Black;
@@ -67,8 +24,11 @@ class DrawingPlayer : ExtraMethods
 
 
 
-    static void MarkerMovement()
+    public static void MarkerMovement()
     {
+
+      DrawMarker( (int)PosX.Middle, (int)PosY.Middle );
+
       while (1 > 0)
       {
 
@@ -93,7 +53,7 @@ class DrawingPlayer : ExtraMethods
 		  {
 
 
-             //Checks if the AI already played that position
+             //CHECKS IF THE AI ALREADY PLAYED THAT POSITION
              if ( ( !posOnePlayed ) && (!AIposOnePlayed) )
 		     {
 
@@ -110,12 +70,12 @@ class DrawingPlayer : ExtraMethods
 		       { ArtificialDumbness.DefenseAI(); }
 
 
-		       //Checks if either the AI or the player won
+		       //CHECKS IF EITHER THE AI OR THE PLAYER WON
 		       Results.WinLoseDraw();
 
 		     }
 
-             //If that position has been taken by the AI, it just beeps the console and resets to the "default" position
+                     //IF THAT POSITION HAS BEEN TAKEN BY THE AI, IT JUST BEEPS THE CONSOLE AND RESETS TO THE "DEFAULT" POSITION
 		     else
 		     { ResetMarker(); }
 	 
@@ -517,21 +477,22 @@ class DrawingPlayer : ExtraMethods
 
 
 
-		//If the match is over, it breaks the loop and the program ends
-		//Else, it loops through the "MarkerMovement()" method again
+		//IF THE MATCH IS OVER, IT ASKS THE USER IF HE WANTS TO PLAY AGAIN
 		if ( CheckIfMatchIsOver() ) 
 		{
-                    //TODO: WRITE A LOOP PROMPT HERE :)
+                    //TODO: WRITE A "PLAY AGAIN?" PROMPT HERE :)
 		} 
 
+
+		//ELSE, IT LOOPS THROUGH THE "MarkerMovement()" METHOD AGAIN
                 else 
                 { 
-                  Console.SetCursorPosition( (int)PosX.Middle, (int)PosY.Middle ); 
 
 		  Console.ForegroundColor = ConsoleColor.Cyan;
-                  Console.Write("██"); 
+		  DrawMarker( (int)PosX.Middle, (int)PosY.Middle );
 
                   MarkerMovement(); 
+
                 }
 
    }

@@ -5,7 +5,7 @@ class ExtraMethods
 
     public enum PosX
     {
-        //Left Positions (x axis)
+        //LEFT POSITIONS (x axis)
         Left = 12,
         Middle = 44,
         Right = 74,
@@ -14,7 +14,7 @@ class ExtraMethods
 
     public enum PosY
     {
-        //Top Positions (y axis)
+        //TOP POSITIONS (y axis)
         Top = 7,
         Middle = 22,
         Bottom = 37
@@ -22,7 +22,7 @@ class ExtraMethods
 
 
 
-      //The reason that "+ 2" is in every "PosX" is because the string "playerMarker" is 2 chars long, so this "+ 2" even things things out
+      //THE REASON THAT "+ 2" IS IN EVERY "PosX" IS BECAUSE THE STRING "playerMarker" IS 2 CHARS LONG, SO THIS "+ 2" EVEN THINGS OUT
       public static (int Left, int Top) posOne = ( (int)PosX.Left + 2, (int)PosY.Top );
       public static (int Left, int Top) posTwo = ( (int)PosX.Middle + 2, (int)PosY.Top );
       public static (int Left, int Top) posThree = ( (int)PosX.Right + 2, (int)PosY.Top );
@@ -34,7 +34,7 @@ class ExtraMethods
       public static (int Left, int Top) posNine = ( (int)PosX.Right + 2, (int)PosY.Bottom );
 
 
-     //Player positions
+     //PLAYER BOOL POSITIONS
      public static bool posOnePlayed = false;
      public static bool posTwoPlayed = false;
      public static bool posThreePlayed = false;
@@ -47,7 +47,7 @@ class ExtraMethods
 
 
 
-    //AI positions
+    //AI BOOL POSITIONS
     public static bool AIposOnePlayed = false;
     public static bool AIposTwoPlayed = false;
     public static bool AIposThreePlayed = false;
@@ -116,103 +116,8 @@ class ExtraMethods
 
     }
 
-/*
-    public static void DrawCharacter()
-    {
 
-      if ( DrawingPlayers.circle )
-      {
-
-        int currentPosX = Console.CursorLeft;
-        int currentPosY = Console.CursorTop;
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY - 5;
-        Console.WriteLine("   ,---.");
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY - 4;
-        Console.WriteLine("  '   ,'\\"); 
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY - 3;
-        Console.WriteLine(" /   /   |");        
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY - 2;
-        Console.WriteLine(".   ; ,. :");
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY - 1;
-        Console.WriteLine("'   | |: :");
- 
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY;
-        Console.WriteLine("'   | .; :");
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY + 1;
-        Console.WriteLine("|   :    |");
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY + 2;
-        Console.WriteLine(" \\   \\  /");
-
-        Console.CursorLeft = currentPosX - 5;
-        Console.CursorTop = currentPosY + 3;
-        Console.WriteLine("  `----'");
-
-      }
-      
-      else
-      {
-        int currentPosX = Console.CursorLeft;
-        int currentPosY = Console.CursorTop;
-
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY - 5;
-        Console.WriteLine(" ,--,  ,--,");
-
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY - 4;
-        Console.WriteLine(" |'. \\/ .`|");
-
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY - 3;
-        Console.WriteLine(" '  \\/  / ;");
-
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY - 2;
-        Console.WriteLine("  \\  \\.' /");
-
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY - 1;
-        Console.WriteLine("   \\  ;  ;");
- 
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY;
-        Console.WriteLine("  / \\  \\  \\");
-  
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY + 1;
-        Console.WriteLine("./__;   ;  \\");
- 
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY + 2;
-        Console.WriteLine("|   :/\\  \\ ;");
-
-        Console.CursorLeft = currentPosX - 8;
-        Console.CursorTop = currentPosY + 3;
-        Console.WriteLine("`---'  `--` ");
- 
-      }
- 
-
-        //The reasons i didn't use a string literal to draw the circle, is because if i used a literal, i wouldn't be able to change its position
-        //So instead, i wrote it line by line without a literal
-    }
-*/
-
+   //THE REASON I JUST DIDNT USE A STRING LITERAL, IS BECAUSE YOU CANT PLACE STRING LITERALS WHEREVER YOU WANT IN THE SCREEN ( with "Console.SetCursorPosition(x, y)" , this just doesnt work with literals )
    public static void DrawCircle()
    {
 
@@ -302,7 +207,7 @@ class ExtraMethods
    }
 
 
-   //This method checks if the match is over by checking the bools of the player and the AI
+   //THIS METHOD CHECKS IF THE MATCH IS OVER BY CHECKING THE RETURN VALUE OF THE METHODS INSIDE THE "RESULTS" CLASS
    public static bool CheckIfMatchIsOver()
    {
 
@@ -315,12 +220,75 @@ class ExtraMethods
 
 
 
-   //This method is used when the player tries to overlap either it's own or the enemy's position
+   //THIS METHOD IS USED WHEN THE PLAYER TRIES TO OVERLAP EITHER HIS OWN OR THE ENEMY'S POSITION
    public static void ResetMarker()
    {
       DrawingPlayer.EraseMarker(); 
-      DrawingPlayer.DrawMarker( 44, 22); 
+      DrawingPlayer.DrawMarker( 44, 22 ); 
       Console.Beep(); 
+   }
+
+
+   public static void ChooseYourCharacter()
+   { 
+       Console.ForegroundColor = ConsoleColor.White;
+
+       Console.WriteLine(@"
+ ██████ ██   ██  ██████   ██████  ███████ ███████    
+██      ██   ██ ██    ██ ██    ██ ██      ██      ██ 
+██      ███████ ██    ██ ██    ██ ███████ █████      
+██      ██   ██ ██    ██ ██    ██      ██ ██      ██ 
+ ██████ ██   ██  ██████   ██████  ███████ ███████   
+
+ 
+                                                   		       
+		       ");
+
+       Console.ForegroundColor = ConsoleColor.Cyan;
+       Console.WriteLine(@"
+   ██████                                       ██   ██         
+  ██    ██                                       ██ ██          
+  ██    ██                                        ███           
+  ██    ██                                       ██ ██          
+   ██████                                       ██   ██       
+		       ");
+
+
+       Console.ForegroundColor = ConsoleColor.White;
+       Console.WriteLine(@"
+███      ███                                 ███      ███     
+██        ██                                 ██        ██     
+██        ██                                 ██        ██     
+██        ██                                 ██        ██     
+███      ███                                 ███      ███		       
+		       ");
+
+       DrawingPlayer.DrawMarker(5, 20);
+      
+       while ( 1 > 0 )
+       { 
+
+         var currentPos = Console.GetCursorPosition();
+         var readInput = Console.ReadKey(true).Key;
+
+	 //MOVEMENT "IF's"
+         if ( readInput == ConsoleKey.D )
+         { DrawingPlayer.EraseMarker();   DrawingPlayer.DrawMarker(50, 20); }
+
+         if ( readInput == ConsoleKey.A )
+         { DrawingPlayer.EraseMarker();  DrawingPlayer.DrawMarker(5, 20); }
+
+
+
+	 //CONFIRMATION "IF's"
+         if ( readInput == ConsoleKey.Enter && currentPos == (5 + 2, 20) )
+         { DrawingPlayer.circle = true; break; }
+
+         if ( readInput == ConsoleKey.Enter && currentPos == (50 + 2, 20) )
+         { DrawingPlayer.circle = false; break; }
+
+       }
+
    }
 
 }
