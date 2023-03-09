@@ -1,9 +1,8 @@
 ﻿using System;
 
 // TODO: 
-// Fix DefenseAI ( i did some changes to it, however some further debugging is necessary to assure that is workign as in intended :)  )
-// Fix bug that sometimes the AI will play twice in the same turn
-// Fix "DrawRandomPosition()" not playing/stop working out of the blue
+// Write a config.txt file, within it you will be able to set multiplayer to false or true, select or character to false or true, and have difference color schemes to choose from
+// Write a "play again" feature
 // Write a multiplayer feature
 
 class MainClass

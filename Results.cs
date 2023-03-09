@@ -46,11 +46,11 @@ class Results : ExtraMethods
       Console.Clear();
       Console.ForegroundColor = ConsoleColor.White;
       Console.WriteLine(@"
-████████ ██ ███████     ██ 
-   ██    ██ ██          ██ 
-   ██    ██ █████       ██ 
-   ██    ██ ██             
-   ██    ██ ███████     ██
+████████ ██ ███████                        ██ 
+   ██    ██ ██                      ██    ██  
+   ██    ██ █████                        ██   
+   ██    ██ ██                      ██  ██    
+   ██    ██ ███████                    ██
                         ");
 
    }

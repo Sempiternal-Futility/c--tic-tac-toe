@@ -894,7 +894,7 @@ class ArtificialDumbness : ExtraMethods
 
 
       //POS 2
-      else if ( (randomNum == 2) )
+      if ( (randomNum == 2) )
       {
          if ( !posTwoPlayed && !AIposTwoPlayed )
          {
@@ -912,7 +912,7 @@ class ArtificialDumbness : ExtraMethods
 
 
       //POS 3
-      else if ( (randomNum == 3) )
+      if ( (randomNum == 3) )
       {
          if ( !posThreePlayed && !AIposThreePlayed )
          {
@@ -929,7 +929,7 @@ class ArtificialDumbness : ExtraMethods
       }
 
       //POS 4
-      else if ( (randomNum == 4 ) )
+      if ( (randomNum == 4 ) )
       {
          if ( !posFourPlayed && !AIposFourPlayed )
          {
@@ -946,7 +946,7 @@ class ArtificialDumbness : ExtraMethods
       }
 
       //POS 5
-      else if ( (randomNum == 5) )
+      if ( (randomNum == 5) )
       {
          if ( !posFivePlayed && !AIposFivePlayed )
          {
@@ -963,7 +963,7 @@ class ArtificialDumbness : ExtraMethods
       }
 
       //POS 6
-      else if ( (randomNum == 6) )
+      if ( (randomNum == 6) )
       {
           if ( !posSixPlayed && !AIposSixPlayed )
           {
@@ -980,7 +980,7 @@ class ArtificialDumbness : ExtraMethods
       }
 
       //POS 7
-      else if ( (randomNum == 7) )
+      if ( (randomNum == 7) )
       {
           if ( !posSevenPlayed && !AIposSevenPlayed )
           {
@@ -997,7 +997,7 @@ class ArtificialDumbness : ExtraMethods
       }
 
       //POS 8
-      else if ( (randomNum == 8) )
+      if ( (randomNum == 8) )
       {
           if ( !posEightPlayed && !AIposEightPlayed )
           {
@@ -1014,7 +1014,7 @@ class ArtificialDumbness : ExtraMethods
       }
 
       //POS 9
-      else if ( (randomNum == 9) )
+      if ( (randomNum == 9) )
       {
           if ( !posNinePlayed && !AIposNinePlayed )
           {
