@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 class ExtraMethods
 {
@@ -289,6 +290,135 @@ class ExtraMethods
 
        }
 
+   }
+
+   public static bool AskPlayAgain()
+   { 
+
+       Console.Clear();
+
+       Console.WriteLine(@"
+██████  ██       █████  ██    ██              █████   ██████   █████  ██ ███    ██             ██████  
+██   ██ ██      ██   ██  ██  ██              ██   ██ ██       ██   ██ ██ ████   ██                  ██ 
+██████  ██      ███████   ████               ███████ ██   ███ ███████ ██ ██ ██  ██               ▄███  
+██      ██      ██   ██    ██                ██   ██ ██    ██ ██   ██ ██ ██  ██ ██               ▀▀    
+██      ███████ ██   ██    ██                ██   ██  ██████  ██   ██ ██ ██   ████               ██
+
+
+                         ");
+       Console.WriteLine(@"
+ ██     ██    ██     ██ ███    ██     ██  
+██       ██  ██     ██  ████   ██      ██ 
+██        ████     ██   ██ ██  ██      ██ 
+██         ██     ██    ██  ██ ██      ██ 
+ ██        ██    ██     ██   ████     ██
+                         ");
+
+       bool repeatSwitch = true;
+       bool playAgain = false;
+
+       while ( repeatSwitch )
+       { 
+
+           switch ( Console.ReadKey(true).KeyChar )
+	   { 
+
+	       case 'y' : repeatSwitch = false; playAgain = true; 
+	       break;
+
+               case 'n' : repeatSwitch = false; playAgain = false;
+	       break;
+
+	       default : repeatSwitch = true;
+	       break;
+
+	   }
+
+       }
+
+       return playAgain;
+
+   }
+
+   public static void LoopProgram()
+   { 
+
+       posOnePlayed = false;
+       posTwoPlayed = false;
+       posThreePlayed = false;
+       posFourPlayed = false;
+       posFivePlayed = false;
+       posSixPlayed = false;
+       posSevenPlayed = false;
+       posEightPlayed = false;
+       posNinePlayed = false;
+
+       AIposOnePlayed = false;
+       AIposTwoPlayed = false;
+       AIposThreePlayed = false;
+       AIposFourPlayed = false;
+       AIposFivePlayed = false;
+       AIposSixPlayed = false;
+       AIposSevenPlayed = false;
+       AIposEightPlayed = false;
+       AIposNinePlayed = false;
+
+       MainClass.Main();
+
+   }
+
+   public static void ByeEmoticon()
+   { 
+
+       Console.Clear();
+
+       for ( byte i = 0; 4 > i; i++ )
+       { 
+
+           Console.WriteLine(@"
+ ███      ███         ██
+██ ██    ██ ██        ██  
+                     ██  
+                    ██    
+      ██           ██	
+
+
+
+██████  ██    ██ ███████             ██     ██     ██ 
+██   ██  ██  ██  ██                  ██     ██     ██ 
+██████    ████   █████               ██     ██     ██ 
+██   ██    ██    ██                                   
+██████     ██    ███████             ██     ██     ██		   
+			    ");
+
+
+           Thread.Sleep(250);
+	   Console.Clear();
+
+
+	   Console.WriteLine(@"
+ ███      ███      ██      
+██ ██    ██ ██      ██     
+                     ██     
+                    ██     
+      ██           ██ 	
+
+
+
+
+██████  ██    ██ ███████             ██     ██     ██ 
+██   ██  ██  ██  ██                  ██     ██     ██ 
+██████    ████   █████               ██     ██     ██ 
+██   ██    ██    ██                                   
+██████     ██    ███████             ██     ██     ██
+		   
+			     ");
+
+	   
+	   Thread.Sleep(250);
+	   Console.Clear();
+	   
+       }
    }
 
 }

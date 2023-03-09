@@ -480,7 +480,14 @@ class DrawingPlayer : ExtraMethods
 		//IF THE MATCH IS OVER, IT ASKS THE USER IF HE WANTS TO PLAY AGAIN
 		if ( CheckIfMatchIsOver() ) 
 		{
-                    //TODO: WRITE A "PLAY AGAIN?" PROMPT HERE :)
+
+                      if ( AskPlayAgain() == true )
+		      { LoopProgram(); }
+
+
+		      else
+		      { ByeEmoticon(); }
+
 		} 
 
 

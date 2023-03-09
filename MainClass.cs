@@ -1,14 +1,14 @@
 ﻿using System;
 
 // TODO: 
-// Write a config.txt file, within it you will be able to set multiplayer to false or true, select or character to false or true, and have difference color schemes to choose from
 // Write a "play again" feature
 // Write a multiplayer feature
+// Write a config.txt file, within it you will be able to set multiplayer to false or true, select or character to false or true, and have difference color schemes to choose from
 
 class MainClass
 {
 
-    static void Main()
+    public static void Main()
     {
          Console.Clear();
          Console.CursorVisible = false;
